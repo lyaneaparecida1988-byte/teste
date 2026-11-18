@@ -57,6 +57,15 @@ body {
     font-weight: 700;
     color: var(--verde-floresta);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
 }
 
 .nav-list {
@@ -330,12 +339,13 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--Viveiro VERDE CAPANEMA--);
+    border-color: var(--verde-floresta);
+    box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.12);
 }
 
 /* Rodapé */
 .footer {
-    background-color: var(--Viveiro VERDE CAPANEMA);
+    background-color: var(--verde-floresta);
     color: var(--branco);
     padding: 25px 0;
 }
@@ -369,6 +379,16 @@ body {
     .header-content {
         flex-direction: column;
         text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 48px;
     }
 
     .nav-list {
