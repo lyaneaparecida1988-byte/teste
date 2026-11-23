@@ -102,8 +102,12 @@ body {
 
 /* Seção Principal (Hero) */
 .hero {
-    background: linear-gradient(rgba(30, 58, 26, 0.78), rgba(30, 58, 26, 0.78)),
-                url('logo.jpeg/logo-viveiro-verde-municipal.jpeg') center/cover no-repeat;
+    background-color: #2d5a27;
+    background-image: linear-gradient(rgba(30, 58, 26, 0.78), rgba(30, 58, 26, 0.78)),
+                      url('logo.jpeg/logo-viveiro-verde-municipal.jpeg');
+    background-position: center, center;
+    background-size: cover, contain;
+    background-repeat: no-repeat;
     color: var(--branco);
     text-align: center;
     padding: 110px 20px;
@@ -180,7 +184,7 @@ body {
 /* Grid de Cards (Catálogo) */
 .grid-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 28px;
 }
 
@@ -198,7 +202,13 @@ body {
     transform: translateY(-5px);
 }
 
+.product-image-link {
+    display: block;
+    cursor: zoom-in;
+}
+
 .card img {
+    display: block;
     width: 100%;
     height: 220px;
     object-fit: contain;
@@ -380,13 +390,18 @@ body {
 /* Responsividade para Celulares e Tablets */
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: column;
-        text-align: center;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
     }
 
     .logo {
-        justify-content: center;
-        font-size: 1.1rem;
+        grid-column: 1;
+        grid-row: 1;
+        justify-content: flex-start;
+        min-width: 0;
+        font-size: 1rem;
     }
 
     .logo img {
@@ -394,10 +409,23 @@ body {
         height: 48px;
     }
 
+    .nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
     .nav-list {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .btn-whatsapp {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        padding: 8px 14px;
+        white-space: nowrap;
     }
 
     .hero h1 {
