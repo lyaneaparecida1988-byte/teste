@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -83,6 +84,15 @@ body {
 
 .nav-list a:hover {
     color: var(--verde-floresta);
+}
+
+.nav-list a:focus-visible,
+.btn-whatsapp:focus-visible,
+.btn-primary:focus-visible,
+.btn-card:focus-visible,
+.footer-links a:focus-visible {
+    outline: 3px solid rgba(74, 124, 68, 0.35);
+    outline-offset: 3px;
 }
 
 .btn-whatsapp {
@@ -440,5 +450,32 @@ body {
     .footer-content {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 92%;
+    }
+
+    .nav-list {
+        gap: 8px 12px;
+        font-size: 0.82rem;
+    }
+
+    .logo {
+        font-size: 0.86rem;
+    }
+
+    .hero {
+        padding: 80px 16px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .contato-grid {
+        padding: 22px 18px;
     }
 }
