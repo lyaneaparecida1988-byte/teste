@@ -10,6 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Link para o arquivo CSS externo -->
     <link rel="stylesheet" href="style.css">
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        window.addEventListener('pageshow', () => {
+            if (!window.location.hash) {
+                const html = document.documentElement;
+                html.style.scrollBehavior = 'auto';
+                window.scrollTo(0, 0);
+                requestAnimationFrame(() => {
+                    html.style.removeProperty('scroll-behavior');
+                });
+            }
+        }, { once: true });
+    </script>
 </head>
 <body>
 
@@ -173,7 +189,7 @@
                     <div class="card-body">
                         <h3>Araça</h3>
                         <p>Frutos pequenos, com sabor agridoce. Excelente adaptação ao clima regional.</p>
-                        <a href="https://wa.me/5546984013590?text=Tenho%20interesse%20na%20muda%20de%20Araça" target="_blank" rel="noopener noreferrer" class="btn-card">Consultar Muda</a>
+                        <a href="https://wa.me/5546999120401?text=Tenho%20interesse%20na%20muda%20de%20Araça" target="_blank" rel="noopener noreferrer" class="btn-card">Consultar Muda</a>
                     </div>
                 </article>  
 
@@ -185,7 +201,7 @@
                     <div class="card-body">
                         <h3>Cana-de-Açúcar</h3>
                         <p>Planta de crescimento rápido, com alto potencial produtivo. Excelente adaptação ao clima regional.</p>
-                        <a href="https://wa.me/5546984013590?text=Tenho%20interesse%20na%20muda%20de%20Cana-de-Açúcar" target="_blank" rel="noopener noreferrer" class="btn-card">Consultar Muda</a>
+                        <a href="https://wa.me/5546999120401?text=Tenho%20interesse%20na%20muda%20de%20Cana-de-Açúcar" target="_blank" rel="noopener noreferrer" class="btn-card">Consultar Muda</a>
                     </div>
                 </article>  
 
