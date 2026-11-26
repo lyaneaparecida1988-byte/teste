@@ -496,12 +496,15 @@ body {
     }
 
     .header-content {
-        grid-template-columns: minmax(0, 1fr) max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .logo {
         gap: 8px;
         max-width: 100%;
+        align-self: flex-start;
     }
 
     .logo-text {
@@ -514,6 +517,7 @@ body {
         padding: 7px 9px;
         font-size: 0.78rem;
         max-width: 100%;
+        align-self: center;
     }
 
     .nav-list {
@@ -532,6 +536,14 @@ body {
 
     .hero {
         padding: 80px 16px;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
     }
 
     .hero-content {
