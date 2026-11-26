@@ -484,8 +484,36 @@ body {
 }
 
 @media (max-width: 480px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
     .container {
         width: 92%;
+    }
+
+    .header-content {
+        grid-template-columns: minmax(0, 1fr) max-content;
+    }
+
+    .logo {
+        gap: 8px;
+        max-width: 100%;
+    }
+
+    .logo-text {
+        min-width: 0;
+        font-size: 0.78rem;
+        overflow-wrap: anywhere;
+    }
+
+    .btn-whatsapp {
+        padding: 7px 9px;
+        font-size: 0.78rem;
+        max-width: 100%;
     }
 
     .nav-list {
@@ -504,6 +532,17 @@ body {
 
     .hero {
         padding: 80px 16px;
+    }
+
+    .hero-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero h1,
+    .hero p {
+        max-width: 100%;
+        overflow-wrap: anywhere;
     }
 
     .section {
