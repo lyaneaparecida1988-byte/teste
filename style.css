@@ -357,6 +357,14 @@ body {
     color: var(--texto-suave);
 }
 
+.contato-info strong img {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.3em;
+    object-fit: contain;
+    vertical-align: -0.15em;
+}
+
 .map-link {
     color: inherit;
     text-decoration: underline;
